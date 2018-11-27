@@ -104,30 +104,16 @@ database and reload its config.
 
 Building or updating from source requires the following build dependencies:
 
-- **Go 1.8.3 or newer**
+- **Go 1.10 or 1.11**
 
   Installation instructions can be found here: http://golang.org/doc/install.
   It is recommended to add `$GOPATH/bin` to your `PATH` at this point.
-
-- **Dep**
-
-  Dep is used to manage project dependencies and provide reproducible builds.
-  To install:
-
-  `go get -u github.com/golang/dep/cmd/dep`
-
-Unfortunately, the use of `dep` prevents a handy tool such as `go get` from
-automatically downloading, building, and installing the source in a single
-command.  Instead, the latest project and dependency sources must be first
-obtained manually with `git` and `dep`, and then `go` is used to build and
-install the project.
 
 - Run the following command to obtain the dcrstakepool code and all dependencies:
 
 ```bash
 $ git clone https://github.com/decred/dcrstakepool $GOPATH/src/github.com/decred/dcrstakepool
 $ cd $GOPATH/src/github.com/decred/dcrstakepool
-$ dep ensure
 ```
 
 - Assuming you have done the below configuration, build and run dcrstakepool:
@@ -153,7 +139,6 @@ matching dependencies:
 ```bash
 $ cd $GOPATH/src/github.com/decred/dcrstakepool
 $ git pull
-$ dep ensure
 $ go build
 $ cd $GOPATH/src/github.com/decred/dcrstakepool/backend/stakepoold
 $ go build
