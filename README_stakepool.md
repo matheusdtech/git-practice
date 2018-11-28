@@ -100,7 +100,7 @@ database and reload its config.
 
 ## Installation
 
-#### Linux/BSD/MacOSX/POSIX - Build from Source
+##### Linux/BSD/MacOSX/POSIX - Build from Source
 
 Building or updating from source requires the following build dependencies:
 
